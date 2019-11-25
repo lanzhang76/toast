@@ -1,2 +1,2 @@
 # toast
-## A word2vec game
+A word2vec game
