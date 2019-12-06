@@ -3,3 +3,4 @@ flavour, flavor
 honour, honor
 neighbour, neighbor
 clamour, clamor
+centre, center
