@@ -48,7 +48,7 @@ latitude
 sound
 word
 country
-zealand
+new zealand
 australia
 curtseying
 air
