@@ -40,13 +40,26 @@ input {
   border: none;
 }
 
-.collections {
-  position: fixed;
+.controls-panel {
+  position: absolute;
   left: 2em;
   bottom: 2em;
+}
+
+.collections {
+  float:left;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 0.9em;
   display: inline-block;
+}
+
+#hint_button {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 0.9em;
+  display: inline-block;
+  bottom: 0;
+  padding-left: 20px;
 }
 
 button {
