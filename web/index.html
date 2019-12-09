@@ -15,10 +15,12 @@
     <h1>toast</h1>
   </div>
   <div class="collections">
-    <input type="radio" name="collection" value="animals.js"> Animals<br>
-    <input type="radio" name="collection" value="bag_of_nouns.js"> Big bag of nouns<br>
-    <input type="radio" name="collection" value="alice.js"> Alice in Wonderland<br>
-    <button>Show Collections</button>
+    <div id="toggleable_elements">
+      <input type="radio" name="collection" value="animals.js"> Animals<br>
+      <input type="radio" name="collection" value="bag_of_nouns.js"> Big bag of nouns<br>
+      <input type="radio" name="collection" value="alice.js"> Alice in Wonderland<br>
+    </div>
+    <button id="collections_button">Hide Collections</button>
   </div>
   <div id="textInput">
     <h2>
@@ -36,5 +38,6 @@
 <script type="text/javascript" src="js/wordinput.js"></script>
 <script type="text/javascript" src="js/pixiDraw.js"></script>
 <script type="text/javascript" src="js/setCollection.js"></script>
+<script type="text/javascript" src="js/hideShowCollections.js"></script>
 
 </html>
