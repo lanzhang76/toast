@@ -11,3 +11,33 @@ $("#word2").keydown(function(e) {
     //$("word2").submit(); // Submit form code
   }
 });
+
+function getDistance(targetword, word1, word2, currentWordbank) {
+  //convert to world position:
+  function convertPos(co) {
+    coPos = app.renderer.width * (co / 1000);
+    return coPos;
+  }
+
+  distance1 = Math.hypot(
+    currentWordbank[targetword][0] - currentWordbank[word1][0],
+    currentWordbank[targetword][1] - currentWordbank[word1][1]
+  );
+  distance2 = Math.hypot(
+    currentWordbank[targetword][0] - currentWordbank[word2][0],
+    currentWordbank[targetword][1] - currentWordbank[word2][1]
+  );
+
+  if (distance1 > distance2) {
+    console.log(
+      `${word2} is closer to the target word ${targetword} than ${word1}.`
+    );
+  } else {
+    console.log(
+      `${word1} is closer to the target word ${targetword} than ${word2}.`
+    );
+  }
+}
+
+// for testing:
+getDistance("ocarina", "window", "ice pick", currentWordbank);

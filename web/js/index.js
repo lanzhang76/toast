@@ -1,3 +1,5 @@
+var currentWordbank = bag_of_nouns;
+
 const app = new PIXI.Application({
   width: window.innerWidth,
   height: window.innerHeight,
