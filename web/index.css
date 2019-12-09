@@ -39,3 +39,29 @@ input {
   font-family: "Roboto Mono", monospace;
   border: none;
 }
+
+.collections {
+  position: fixed;
+  left: 2em;
+  bottom: 2em;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 0.9em;
+  display: inline-block;
+}
+
+button {
+  font-size: 0.9em;
+  font-family: "Roboto Mono", monospace;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
