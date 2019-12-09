@@ -4,3 +4,6 @@ honour, honor
 neighbour, neighbor
 clamour, clamor
 centre, center
+york, new york
+zealand,  new zealand
+favour, favor
