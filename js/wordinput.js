@@ -25,8 +25,6 @@ $("#word2").keydown(function(e) {
   }
 });
 
-function checkForValue(value) {}
-
 function getRandomTarget() {
   var randomIndex = Math.floor(
     Math.random() * Object.keys(currentWordbank).length
