@@ -8,13 +8,19 @@ $("#word2").keydown(function(e) {
   var key = e.which;
   var word2value = document.getElementById("word2").value;
   if (key == 13) {
-    if (currentWordbank.hasOwnProperty(word2value)) {
-      console.log(`hello. ${word2value} is submitted`);
-      getDistance(targetword, currentNearestword, word2value);
+    if (word2value == targetword) {
+      appendToList(listOfPoints, word2value);
+      alert(`You got it! the word is ${word2value}.`);
       document.getElementById("word2").value = "";
     } else {
-      alert("sorry, I don't know that word.");
-      document.getElementById("word2").value = "";
+      if (currentWordbank.hasOwnProperty(word2value)) {
+        console.log(`hello. ${word2value} is submitted`);
+        getDistance(targetword, currentNearestword, word2value);
+        document.getElementById("word2").value = "";
+      } else {
+        alert("sorry, I don't know that word.");
+        document.getElementById("word2").value = "";
+      }
     }
   }
 });
