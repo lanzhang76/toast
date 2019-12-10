@@ -37,7 +37,8 @@ function drawAllHint() {
   }
 }
 
-function drawAllLine(list) {
+//Draw everything in the list
+function drawActiveLine(list) {
   //create new line drawing
   var line = new PIXI.Graphics();
   line.lineStyle(5, 0x000000);
@@ -104,7 +105,7 @@ function drawLastCircle() {
   //viewport.moveCenter(xPos, yPos);
 }
 
-drawAllHint();
-appendToList(listOfPoints, "notebook");
-appendToList(listOfPoints, "rope");
-appendToList(listOfPoints, "whip");
+// drawAllHint();
+// appendToList(listOfPoints, "notebook");
+// appendToList(listOfPoints, "rope");
+// appendToList(listOfPoints, "whip");
