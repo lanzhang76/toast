@@ -1,4 +1,9 @@
-var hint = true;
+var listOfPoints = [];
+
+function convertPos(co) {
+  coPos = app.renderer.width * (co / 1000);
+  return coPos;
+}
 
 function drawAllHint() {
   //Drawing all circles
@@ -33,12 +38,6 @@ function drawAllHint() {
 }
 
 function drawAllLine(list) {
-  //drawing lines that connect circlces
-  //covert the coordinate to viewport coordinate
-  function convertPos(co) {
-    coPos = app.renderer.width * (co / 1000);
-    return coPos;
-  }
   //create new line drawing
   var line = new PIXI.Graphics();
   line.lineStyle(5, 0x000000);
@@ -54,46 +53,55 @@ function drawAllLine(list) {
   viewport.addChild(line);
 }
 
-var listOfPoints = [];
 function appendToList(list, word) {
   list.push(word);
+  if (listOfPoints.length > 1) {
+    drawLastLine();
+  }
+  drawLastCircle();
   return list;
+}
+
+function drawLastLine() {
+  var last = listOfPoints.length - 1;
+  var secondTolast = listOfPoints.length - 2;
+  var line = new PIXI.Graphics();
+  line.lineStyle(5, 0x000000);
+  line.moveTo(
+    convertPos(currentWordbank[listOfPoints[secondTolast]][0]),
+    convertPos(currentWordbank[listOfPoints[secondTolast]][1])
+  );
+  line.lineTo(
+    convertPos(currentWordbank[listOfPoints[last]][0]),
+    convertPos(currentWordbank[listOfPoints[last]][1])
+  );
+  viewport.addChild(line);
+}
+
+function drawLastCircle() {
+  var last = listOfPoints.length - 1;
+  xPos = convertPos(currentWordbank[listOfPoints[last]][0]);
+  yPos = convertPos(currentWordbank[listOfPoints[last]][1]);
+  name = listOfPoints[last];
+  const circle = new PIXI.Graphics();
+  const radius = 10;
+  circle.hitArea = new PIXI.Circle(xPos, yPos, radius);
+  circle.interactive = true;
+  circle.lineStyle(1, 0x000000, 1);
+  circle.beginFill(0xffffff * Math.random(), 0.6);
+  circle.drawCircle(xPos, yPos, radius);
+  circle.endFill();
+  const text = new PIXI.Text(name, {
+    fontFamily: "Roboto Mono",
+    align: "left"
+  });
+  text.style.fill = 0x666666;
+  text.position.set(xPos, yPos + 15);
+  text.interactive = true;
+  circle.addChild(text);
+  viewport.addChild(circle);
 }
 
 appendToList(listOfPoints, "notebook");
 appendToList(listOfPoints, "rope");
-drawAllHint();
-//drawAllLine(listOfPoints);
-//console.log(currentWordbank[listOfPoints[0]], currentWordbank[listOfPoints[1]]);
-animateLine(currentWordbank[listOfPoints[0]], currentWordbank[listOfPoints[1]]);
-
-let count = 0;
-function animateLine(pointFrom, pointTo) {
-  function convertPos(co) {
-    coPos = app.renderer.width * (co / 1000);
-    return coPos;
-  }
-
-  //draw line
-  var line = new PIXI.Graphics();
-  line.lineStyle(5, 0x000000);
-  var xFrom = convertPos(pointFrom[0]);
-  var yFrom = convertPos(pointFrom[1]);
-  var xTo = convertPos(pointTo[0]);
-  var yTo = convertPos(pointTo[1]);
-  console.log(xFrom, xTo);
-  console.log(yFrom, yTo);
-  var distanceX = xTo - xFrom;
-  var distanceY = yTo - yFrom;
-  var magnitude = Math.hypot(distanceX, distanceY);
-  var directionX = distanceX / magnitude;
-  var directionY = distanceY / magnitude;
-
-  line.moveTo(xFrom, yFrom);
-  app.ticker.add(() => {
-    count += 0.01;
-    speed = 0.000000001;
-    line.lineTo(xFrom + directionX * speed, yFrom + directionY * speed);
-  });
-  viewport.addChild(line);
-}
+appendToList(listOfPoints, "jar of pickles");
