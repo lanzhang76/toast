@@ -38,7 +38,7 @@ function drawAllHint() {
 }
 
 //Draw everything in the list
-function drawActiveLine(list) {
+function drawActiveOnes(list) {
   //create new line drawing
   var line = new PIXI.Graphics();
   line.lineStyle(5, 0x000000);
@@ -50,7 +50,6 @@ function drawActiveLine(list) {
     }
   }
 
-  drawAllpoints();
   viewport.addChild(line);
 }
 
