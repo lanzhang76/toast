@@ -62,6 +62,29 @@ input {
   padding-left: 20px;
 }
 
+.about_info {
+  position: fixed;
+  right: 2em;
+  top: 1em;
+}
+
+.about_section {
+  font-size: 0.9em;
+  display: inline-block;
+}
+
+#info_button {
+  position: absolute;
+  top: 0em;
+  right: 0em;
+  font-size:0.9em;
+}
+
+#info_panel{
+  padding-top: 1em;
+  border: blue;
+}
+
 button {
   font-size: 0.9em;
   font-family: "Roboto Mono", monospace;
@@ -79,3 +102,4 @@ select:focus,
 button:focus {
   outline: none;
 }
+
