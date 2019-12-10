@@ -100,9 +100,11 @@ function drawLastCircle() {
   text.interactive = true;
   circle.addChild(text);
   viewport.addChild(circle);
-  //viewport.center.set(xPos, yPos);
+  viewport.snap(xPos, yPos);
+  //viewport.moveCenter(xPos, yPos);
 }
 
+drawAllHint();
 appendToList(listOfPoints, "notebook");
 appendToList(listOfPoints, "rope");
-appendToList(listOfPoints, "jar of pickles");
+appendToList(listOfPoints, "whip");
