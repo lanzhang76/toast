@@ -6,7 +6,7 @@ const app = new PIXI.Application({
   antialias: true
 });
 
-app.renderer.backgroundColor = 0xffffff;
+app.renderer.backgroundColor = 0xf5f5f5;
 
 document.body.appendChild(app.view);
 

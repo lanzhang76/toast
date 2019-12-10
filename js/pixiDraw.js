@@ -17,7 +17,7 @@ function drawAllHint() {
     //drawing circles
     circle.hitArea = new PIXI.Circle(xPos, yPos, radius);
     circle.interactive = true;
-    circle.lineStyle(1, 0x000000, 1);
+    circle.lineStyle(1, 0x000000, 0);
     circle.beginFill(0xffffff * Math.random(), 0.6);
     circle.drawCircle(xPos, yPos, radius);
     circle.endFill();
@@ -66,7 +66,7 @@ function drawLastLine() {
   var last = listOfPoints.length - 1;
   var secondTolast = listOfPoints.length - 2;
   var line = new PIXI.Graphics();
-  line.lineStyle(5, 0x000000);
+  line.lineStyle(4, 0x646464);
   line.moveTo(
     convertPos(currentWordbank[listOfPoints[secondTolast]][0]),
     convertPos(currentWordbank[listOfPoints[secondTolast]][1])
@@ -87,7 +87,7 @@ function drawLastCircle() {
   const radius = 10;
   circle.hitArea = new PIXI.Circle(xPos, yPos, radius);
   circle.interactive = true;
-  circle.lineStyle(1, 0x000000, 1);
+  circle.lineStyle(1, 0x000000, 0);
   circle.beginFill(0xffffff * Math.random(), 0.6);
   circle.drawCircle(xPos, yPos, radius);
   circle.endFill();
