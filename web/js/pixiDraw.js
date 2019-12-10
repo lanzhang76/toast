@@ -100,6 +100,7 @@ function drawLastCircle() {
   text.interactive = true;
   circle.addChild(text);
   viewport.addChild(circle);
+  //viewport.center.set(xPos, yPos);
 }
 
 appendToList(listOfPoints, "notebook");
