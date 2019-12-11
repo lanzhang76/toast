@@ -12,7 +12,6 @@ $("#word2").keydown(function(e) {
       appendToList(listOfPoints, word2value);
       endGame();
       document.getElementById("word2").value = "";
-      // TODO(Anna): Add play again button
     } else {
       if (currentWordbank.hasOwnProperty(word2value)) {
         console.log(`hello. ${word2value} is submitted`);
@@ -24,6 +23,8 @@ $("#word2").keydown(function(e) {
       }
     }
   }
+  document.getElementById('word2').placeholder = "";
+
 });
 
 function getRandomTarget() {
