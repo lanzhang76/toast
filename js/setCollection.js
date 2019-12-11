@@ -14,6 +14,7 @@ for(radio in radios) {
 			} else {
 				currentWordbank = bag_of_nouns;
 			}
+			resetAppData();
 		} else {
 			return false;
 		}
