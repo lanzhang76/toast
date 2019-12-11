@@ -28,6 +28,22 @@ canvas {
   display: inline-block;
 }
 
+#endGame {
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  background-color: Transparent;
+  font-size: 0.7em;
+  display: none;
+}
+
+#end-word {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
 input {
   height: 1.5em;
   background: rgba(0, 0, 0, 0.05);
