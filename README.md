@@ -12,3 +12,8 @@ A word2vec game
     -   add timer / guess counter 'score'
 -   ui
     -   show/hide 'About' section
+
+
+## Bugs
+
+-   When you choose a new collection, clear the previous game's path
