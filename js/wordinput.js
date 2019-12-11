@@ -12,6 +12,8 @@ $("#word2").keydown(function(e) {
       appendToList(listOfPoints, word2value);
       alert(`You got it! the word is ${word2value}.`);
       document.getElementById("word2").value = "";
+      // TODO(Anna): Add play again button
+      // TODO(Anna): Update text in bottom right to say 'you got it!'
     } else {
       if (currentWordbank.hasOwnProperty(word2value)) {
         console.log(`hello. ${word2value} is submitted`);
