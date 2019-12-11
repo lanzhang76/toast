@@ -23,7 +23,7 @@ canvas {
   position: fixed;
   right: 2em;
   bottom: 2em;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: Transparent;
   font-size: 0.7em;
   display: inline-block;
 }
@@ -59,7 +59,7 @@ input {
 
 .collections {
   float: left;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: Transparent;
   font-size: 0.9em;
   display: inline-block;
 }
@@ -103,7 +103,7 @@ input {
 button {
   font-size: 0.9em;
   font-family: "Roboto Mono", monospace;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: Transparent;
   border: none;
 }
 
