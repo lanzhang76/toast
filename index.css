@@ -53,6 +53,10 @@ input {
   display: inline-block;
 }
 
+#toggleable-elements {
+  display: none;
+}
+
 #hint_button {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.2);
@@ -102,4 +106,3 @@ select:focus,
 button:focus {
   outline: none;
 }
-
