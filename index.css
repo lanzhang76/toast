@@ -39,10 +39,7 @@ canvas {
 }
 
 #end-word {
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 2px;
-  padding-left: 3px;
-  padding-right: 3px;
+  text-decoration: underline;
 }
 
 #end-game-text {
