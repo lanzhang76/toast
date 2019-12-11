@@ -12,6 +12,7 @@ A word2vec game
     -   add timer / guess counter 'score'
 -   ui
     -   show/hide 'About' section
+    -   clicking 'toast' restarts the game
 
 
 ## Bugs
