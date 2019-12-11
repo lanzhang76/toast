@@ -14,8 +14,3 @@ A word2vec game
 -   ui
     -   show/hide 'About' section
     -   clicking 'toast' restarts the game
-
-
-## Bugs
-
--   When you choose a new collection, clear the previous game's path
