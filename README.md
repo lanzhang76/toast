@@ -15,6 +15,7 @@ A word2vec game
 -   play-flow
     -   add play again button
     -   add timer / guess counter 'score'
+    -   add consecutive guessing counter 
 -   ui
     -   show/hide 'About' section
     -   clicking 'toast' restarts the game
