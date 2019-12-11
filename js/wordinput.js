@@ -1,5 +1,5 @@
 //below is inserting the closest word to the current question slot1
-var currentNearestword = "bottle";
+var currentNearestword = "toast";
 var placeholder = document.getElementById("word1");
 placeholder.innerHTML = currentNearestword;
 var targetword = "";
