@@ -61,7 +61,6 @@ input {
   float: left;
   background-color: Transparent;
   font-size: 0.9em;
-  display: inline-block;
 }
 
 #toggleable-elements {
