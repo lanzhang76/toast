@@ -7,6 +7,7 @@ A word2vec game
     -   seinfeld text
     -   clean up existing files if needed
     -   put toast into each wordbank
+    -   spread out alice text
 -   play-flow
     -   add play again button
     -   add timer / guess counter 'score'
