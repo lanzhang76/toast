@@ -1,78 +1,107 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.5/pixi.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pixi-viewport@4.3.3/dist/viewport.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>toast</title>
+  </head>
 
-<head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.5/pixi.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pixi-viewport@4.3.3/dist/viewport.min.js"></script>
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="index.css" />
-  <title>toast</title>
-</head>
+  <body>
+    <div id="title">
+      <a href="https://toast2word.netlify.com/"><h1>toast</h1></a>
+    </div>
 
-<body>
-  <div id="title">
-    <h1>toast</h1>
-  </div>
-
-  <div class="controls-panel">
-    <div class="collections">
-      <div id="toggleable-elements">
-        <input type="radio" name="collection" value="bag_of_nouns" checked />
-        Big bag of nouns<br />
-        <input type="radio" name="collection" value="animals" />
-        Animals<br />
-        <input type="radio" name="collection" value="alice" /> Alice in
-        Wonderland<br />
+    <div class="controls-panel">
+      <div class="collections">
+        <div id="toggleable-elements">
+          <input type="radio" name="collection" value="bag_of_nouns" checked />
+          Big bag of nouns<br />
+          <input type="radio" name="collection" value="animals" />
+          Animals<br />
+          <input type="radio" name="collection" value="alice" /> Alice in
+          Wonderland<br />
+        </div>
+        <button id="collections_button">Show Collections</button>
       </div>
-      <button id="collections_button">Show Collections</button>
+      <div>
+        <button id="hint_button">Show Hints</button>
+      </div>
     </div>
-    <div>
-      <button id="hint_button">Show Hints</button>
+
+    <div class="about_info">
+      <div class="about_section" id="info_button">
+        <button id="info_realbutton">about</button>
+      </div>
+      <div class="about_section" id="info_panel">
+        <p>
+          <b>"Toast"</b> is a word guessing game. The goal is to guess the
+          target word the program randomly picks from the chosen word
+          collection. By asking a series of “Is the word closer to WordA or Word
+          B?” questions, the player will navigate through a vector space where
+          words are mapped into vector coordinates based on their similarity to
+          each other within the larger context. The program calculates the
+          distance between the target word and the guessing words, changes the
+          prompt to display the word of smaller of the two distances, and plots
+          the correct guessing trail on the canvas. <br /><br />
+          The words were curated by us, processed with
+          <a href="https://spacy.io/usage/vectors-similarity" target="blank"
+            >spaCy’s word2vec</a
+          >, scaled and plotted with
+          <a
+            href="https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html"
+            target="blank"
+            >Sci-kitLearn t-SNE</a
+          >, and are brought to your browser with
+          <a href="https://www.pixijs.com/" target="blank">pixi.js</a>. Enjoy!
+          <br /><br />
+          <a href="https://annagarbier.github.io/portfolio/" target="blank"
+            >Anna</a
+          >
+          &
+          <a href="https://iamlanzhang.com/" target="blank">Lan</a>
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div class="about_info">
-    <div class="about_section" id="info_button">
-      <button id="info_realbutton">About</button>
+    <div id="textInput">
+      <h2>
+        Is the word closer to <span id="word1"></span> or
+        <input
+          type="text"
+          name="word2"
+          id="word2"
+          placeholder="Guess word here..."
+        />
+        ?
+      </h2>
     </div>
-    <div class="about_section" id="info_panel">
-      <p>This is going to be the description of this project
-        <br>
-        Annaaaaa
-        <br>
-        Lannnnn
-      </p>
+    <div id="endGame">
+      <h2 id="end-game-text">
+        You got it! The word is <span id="end-word"></span>!
+      </h2>
+      <button id="play-again"><h2>Play again</h2></button>
     </div>
-  </div>
+  </body>
+  <script type="text/javascript" src="js/animals_coord.js"></script>
+  <script type="text/javascript" src="js/alice.js"></script>
+  <script type="text/javascript" src="js/animals.js"></script>
+  <script type="text/javascript" src="js/bag_of_nouns.js"></script>
 
-  <div id="textInput">
-    <h2>
-      Is the word closer to <span id="word1"></span> or
-      <input type="text" name="word2" id="word2" placeholder="Guess word here..."/> ?
-    </h2>
-  </div>
-  <div id="endGame">
-    <h2 id="end-game-text">
-      You got it! The word is <span id="end-word"></span>!
-    </h2>
-    <button id="play-again"><h2>Play again</h2></button>
-  </div>
-</body>
-<script type="text/javascript" src="js/animals_coord.js"></script>
-<script type="text/javascript" src="js/alice.js"></script>
-<script type="text/javascript" src="js/animals.js"></script>
-<script type="text/javascript" src="js/bag_of_nouns.js"></script>
-
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/wordinput.js"></script>
-<script type="text/javascript" src="js/pixiDraw.js"></script>
-<script type="text/javascript" src="js/setCollection.js"></script>
-<script type="text/javascript" src="js/hideShowCollections.js"></script>
-<script type="text/javascript" src="js/hideShowHints.js"></script>
-<script type="text/javascript" src="js/resetAppData.js"></script>
-<script type="text/javascript" src="js/endGame.js"></script>
-<script type="text/javascript" src="js/playAgain.js"></script>
-
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/wordinput.js"></script>
+  <script type="text/javascript" src="js/pixiDraw.js"></script>
+  <script type="text/javascript" src="js/setCollection.js"></script>
+  <script type="text/javascript" src="js/hideShowCollections.js"></script>
+  <script type="text/javascript" src="js/hideShowHints.js"></script>
+  <script type="text/javascript" src="js/hideShowAbout.js"></script>
+  <script type="text/javascript" src="js/resetAppData.js"></script>
+  <script type="text/javascript" src="js/endGame.js"></script>
+  <script type="text/javascript" src="js/playAgain.js"></script>
 </html>

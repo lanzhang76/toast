@@ -10,6 +10,15 @@ canvas {
   display: block;
 }
 
+#title a {
+  color: black;
+  text-decoration: none;
+}
+
+#info_panel a {
+  color: black;
+}
+
 #title {
   position: fixed;
   margin-left: 2em;
@@ -53,7 +62,7 @@ canvas {
 }
 
 #play-again h2 {
-  background-color: rgba(255, 204, 102, .5);
+  background-color: rgba(255, 204, 102, 0.5);
   padding-left: 3px;
   padding-right: 3px;
   border-radius: 2px;
@@ -122,12 +131,16 @@ input {
   position: absolute;
   top: 0em;
   right: 0em;
-  font-size:0.9em;
+  font-size: 0.9em;
 }
 
-#info_panel{
-  padding-top: 1em;
-  border: blue;
+#info_panel {
+  padding-top: 2em;
+  display: none;
+  width: 40em;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 button {
