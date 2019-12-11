@@ -5,7 +5,15 @@ for(radio in radios) {
     	var prettyCollectionName = this.value.replace(/_/g,  ' ').toUpperCase();
     	var message = `By changing the collection, you are about to start a new session. Continue to ${prettyCollectionName} collection?`
     	if (window.confirm(message)) {
-    		currentWordbank = this.value;
+			drawAllHint("Hide Hints");
+      		hintButton.innerHTML = "Show Hints";
+			if (this.value === "animals") {
+				currentWordbank = animals;
+			} else if (this.value === "alice") {
+				currentWordbank = alice;
+			} else {
+				currentWordbank = bag_of_nouns;
+			}
 		} else {
 			return false;
 		}
