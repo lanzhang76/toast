@@ -16,6 +16,7 @@ A word2vec game
     -   add play again button
     -   add timer / guess counter 'score'
     -   add consecutive guessing counter 
+    -   i give up button
 -   ui
     -   show/hide 'About' section
     -   clicking 'toast' restarts the game
