@@ -40,6 +40,17 @@ input {
   border: none;
 }
 
+#word1 {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  vertical-align: middle;
+  font-size: 0.9em;
+}
+
 .controls-panel {
   position: absolute;
   left: 2em;
