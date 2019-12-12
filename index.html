@@ -22,22 +22,31 @@
       <div class="collections">
         <div id="toggleable-elements">
           <label>
-              <input type="radio" name="collection" value="bag_of_nouns" checked />
-              big bag of nouns<br />
+            <input
+              type="radio"
+              name="collection"
+              value="bag_of_nouns"
+              checked
+            />
+            big bag of nouns<br />
           </label>
           <label>
-              <input type="radio" name="collection" value="animals" />
-              animals<br />
+            <input type="radio" name="collection" value="animals" />
+            animals<br />
           </label>
           <label>
-              <input type="radio" name="collection" value="alice" /> alice in
-              wonderland<br />
+            <input type="radio" name="collection" value="alice" /> alice in
+            wonderland<br />
+          </label>
+          <label>
+            <input type="radio" name="collection" value="seinfeld" />
+            seinfeld<br />
           </label>
         </div>
-        <button id="collections_button">show<br>collections</button>
+        <button id="collections_button">show<br />collections</button>
       </div>
       <div>
-        <button id="hint_button">show<br>hints</button>
+        <button id="hint_button">show<br />hints</button>
       </div>
     </div>
 
@@ -79,18 +88,13 @@
     <div id="textInput">
       <h2>
         Is the word closer to <span id="word1"></span> or
-        <input
-          type="text"
-          name="word2"
-          id="word2"
-          autofocus="autofocus"
-        />
+        <input type="text" name="word2" id="word2" autofocus="autofocus" />
         ?
       </h2>
     </div>
     <div id="endGame">
       <h2 id="end-game-text">
-        You got it! The word is <span id="end-word"></span>!<br>
+        You got it! The word is <span id="end-word"></span>!<br />
         You found it in <span id="num-guesses"></span>.
       </h2>
       <button id="play-again"><h2>Play again</h2></button>
@@ -100,6 +104,7 @@
   <script type="text/javascript" src="js/alice.js"></script>
   <script type="text/javascript" src="js/animals.js"></script>
   <script type="text/javascript" src="js/bag_of_nouns.js"></script>
+  <script type="text/javascript" src="js/seinfeld.js"></script>
 
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript" src="js/wordinput.js"></script>
