@@ -25,9 +25,6 @@ $("#word2").keydown(function(e) {
       }
     }
   }
-  // After first guess, we don't need placeholder
-  // text in input box
-  document.getElementById('word2').placeholder = "";
 });
 
 function getRandomTarget() {
