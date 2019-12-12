@@ -3,11 +3,13 @@ var currentNearestword = "toast";
 var placeholder = document.getElementById("word1");
 placeholder.innerHTML = currentNearestword;
 var targetword = "";
+var guessCounter = 0;
 
 $("#word2").keydown(function(e) {
   var key = e.which;
   var word2value = document.getElementById("word2").value;
   if (key == 13) {
+    guessCounter += 1;
     if (word2value == targetword) {
       appendToList(listOfPoints, word2value);
       endGame();
@@ -23,8 +25,9 @@ $("#word2").keydown(function(e) {
       }
     }
   }
+  // After first guess, we don't need placeholder
+  // text in input box
   document.getElementById('word2').placeholder = "";
-
 });
 
 function getRandomTarget() {
