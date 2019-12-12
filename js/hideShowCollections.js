@@ -7,10 +7,10 @@ buttonText.addEventListener(
 
     if (collectionInfo.style.display === "block") {
       collectionInfo.style.display = "none";
-      buttonText.innerHTML = "Show Collections";
+      buttonText.innerHTML = "show<br>collections";
     } else {
       collectionInfo.style.display = "block";
-      buttonText.innerHTML = "Hide Collections";
+      buttonText.innerHTML = "hide<br>collections";
     }
   },
   false

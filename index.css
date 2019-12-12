@@ -118,6 +118,7 @@ input {
   display: inline-block;
   bottom: 0;
   padding-left: 20px;
+  text-align: left;
 }
 
 .about_info {
@@ -153,6 +154,7 @@ button {
   background-color: Transparent;
   border: none;
   padding: 0;
+  text-align: left;
 }
 
 button:hover,
