@@ -32,7 +32,7 @@ function drawAllHint(showMessage) {
     text.interactive = true;
 
     circle.addChild(text);
-    if (showMessage == "Show Hints") {
+    if (showMessage == "show<br>hints") {
       //console.log("show hints");
       viewport.addChild(circle);
     } else {

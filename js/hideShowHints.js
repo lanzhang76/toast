@@ -5,11 +5,11 @@ hintButton.addEventListener(
   function(event) {
     if (hintButton.innerHTML === "show<br>hints") {
       // Update main UI
-      drawAllHint("Show Hints");
+      drawAllHint("show<br>hints");
       hintButton.innerHTML = "hide<br>hints";
     } else {
       // Update main UI
-      drawAllHint("Hide Hints");
+      drawAllHint("hide<br>hints");
       hintButton.innerHTML = "show<br>hints";
     }
   },

@@ -5,5 +5,5 @@ function resetAppData() {
   viewport.removeChildren(); // Clear the previous game's path
   document.getElementById("textInput").style.display = "inline-block";
   document.getElementById("endGame").style.display = "none";
-  hintButton.innerHTML = "Show Hints";
+  hintButton.innerHTML = "show<br>hints";
 }
