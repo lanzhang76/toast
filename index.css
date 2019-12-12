@@ -1,3 +1,7 @@
+html {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   overflow: hidden;
@@ -135,12 +139,12 @@ input {
 }
 
 #info_panel {
-  padding-top: 2em;
+  padding: 1em;
   display: none;
-  width: 40em;
+  width: 36em;
   font-size: 0.9em;
   line-height: 1.5em;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 button {

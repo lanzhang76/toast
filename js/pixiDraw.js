@@ -17,7 +17,6 @@ function drawAllHint(showMessage) {
     const circle = new PIXI.Graphics();
     const text = new PIXI.Text(name, {
       fontFamily: "Roboto Mono",
-      // fontSize: 17,
       align: "left"
     });
     //drawing circles
@@ -141,5 +140,4 @@ function drawLastCircle() {
   circle.addChild(text);
   viewport.addChild(circle);
   viewport.snap(xPos, yPos);
-  //viewport.moveCenter(xPos, yPos);
 }
