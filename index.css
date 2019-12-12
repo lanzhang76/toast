@@ -155,7 +155,8 @@ button {
   padding: 0;
 }
 
-button:hover {
+button:hover,
+label:hover {
   cursor: pointer;
 }
 
