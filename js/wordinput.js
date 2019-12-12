@@ -65,7 +65,17 @@ function getDistance(targetword, word1, word2) {
   }
   currentNearestword = nearest;
   placeholder.innerHTML = nearest;
-  appendToList(listOfPoints, nearest);
+  // Only add the current nearest word to the list
+  // if it's not already there.
+  if (!listOfPoints.includes(nearest)) {
+    appendToList(listOfPoints, nearest);
+    console.log(listOfPoints);
+    console.log(nearest);
+  }
+}
+
+function normalize(s) {
+  return s.toLowerCase().replace(/ /g,'');
 }
 
 getRandomTarget();
