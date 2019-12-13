@@ -7,7 +7,7 @@ var guessCounter = 0;
 
 $("#word2").keydown(function(e) {
   var key = e.which;
-  var word2value = document.getElementById("word2").value;
+  var word2value = normalize(document.getElementById("word2").value);
   if (key == 13) {
     guessCounter += 1;
     if (word2value == targetword) {
@@ -74,8 +74,11 @@ function getDistance(targetword, word1, word2) {
   }
 }
 
+// TODO(Anna, Lan): Build out the input normalization logic
+// to handle variations in things like whitespace in
+// compound nouns or multiple british/english spellings.
 function normalize(s) {
-  return s.toLowerCase().replace(/ /g,'');
+  return s.toLowerCase();
 }
 
 getRandomTarget();
