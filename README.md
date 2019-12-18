@@ -1,4 +1,4 @@
-# [Toast](toast2word.netlify.com)
+# [Toast](http://toast2word.netlify.com)
 
 > A collaboration between [Anna Garbier](https://annagarbier.github.io/portfolio) & [Lan Zhang](iamlanzhang.com)
 
