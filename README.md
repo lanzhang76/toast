@@ -19,9 +19,10 @@ The guessing always starts with **toast**, hence the name of the game!
 
 Behind the scenes, every word in program's "lexicon" is represented as a vector, and plotted in a two-dimensional space. In this space, words that are semantically similar to each other are clustered together; words that are semantically different are far apart. For example, "sofa" and "couch" are close together, but "sofa" and "orca whale" are far apart.
 
-When the program responds to the player's questions, it does so by calculating the distance between the mystery word and the guessed words within the vector space. The player gets to see this calculation through toggle-able a visual UI.
+When the program responds to the player's questions, it does so by calculating the distance between the mystery word and the guessed words within the vector space. As the player moves through the space en route to the mystery word, a trail of guesses is drawn to the screen.
 
 ![image](/images/00.png)
+*A trail of guesses, with the "hints" set to visible. A more challenging version can be played by turning off the visual hints.
 
 ## Tools
 
