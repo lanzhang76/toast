@@ -22,7 +22,7 @@ Behind the scenes, every word in program's "lexicon" is represented as a vector,
 When the program responds to the player's questions, it does so by calculating the distance between the mystery word and the guessed words within the vector space. As the player moves through the space en route to the mystery word, a trail of guesses is drawn to the screen.
 
 ![image](/images/00.png)
-*A trail of guesses, with the "hints" set to visible. A more challenging version can be played by turning off the visual hints.
+*A trail of guesses, with the "hints" set to visible. A more challenging version can be played by turning off the visual hints.*
 
 ## Tools
 
