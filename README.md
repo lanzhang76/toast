@@ -4,7 +4,7 @@
 
 ## What is Toast?
 
-**"Toast"** is a word guessing game, played between a computer program and one or more players. The game begins when the program chooses a mystery word from a large collection of words. The player tries to guess the mystery word by asking a series of *"Is it more like \___ or \___?"* quseitons. For example, if the mystery word is **schoolbus**:
+**"Toast"** is a word guessing game, played between a computer program and one or more players. The game begins when the program chooses a mystery word from a large collection of words. The player tries to guess the mystery word by asking a series of *"Is it more like \___ or \___?"* questions. For example, if the mystery word is **schoolbus**:
 
 ><u>Player</u>: Is the mystery word more like **toast** or **banana**?<br>
 <u>Program</u>: **Banana**.<br>
