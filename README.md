@@ -28,6 +28,9 @@ When the program responds to the player's questions, it does so by calculating t
 
 The words were curated by us, processed with [spaCy word2vec](https://spacy.io/usage/vectors-similarity), scaled and plotted with [Sci-kitLearn t-SNE](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html), and are brought to your browser with [pixi.js](https://www.pixijs.com/).
 
+![image](/images/04.png)
+*Word processing pipeline*
+
 ## Discovering linguistic spaces
 
 Part of the goal of "Toast" is to explore linguistic datasets through play. The game currently has four datasets:
