@@ -48,3 +48,9 @@ Part of the goal of "Toast" is to explore linguistic datasets through play. The 
 
 ![image](/images/03.png)
 *Creating a custom dataset*
+
+## TO DOs
+
+- Wordnet Morphy
+- Mobile responsive
+
